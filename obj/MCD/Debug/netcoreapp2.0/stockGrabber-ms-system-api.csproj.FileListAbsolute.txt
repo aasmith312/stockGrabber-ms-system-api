@@ -1,0 +1,12 @@
+C:\GitRoot\stockGrabber-ms-system-api\bin\MCD\Debug\netcoreapp2.0\stockGrabber-ms-system-api.deps.json
+C:\GitRoot\stockGrabber-ms-system-api\bin\MCD\Debug\netcoreapp2.0\stockGrabber-ms-system-api.runtimeconfig.json
+C:\GitRoot\stockGrabber-ms-system-api\bin\MCD\Debug\netcoreapp2.0\stockGrabber-ms-system-api.runtimeconfig.dev.json
+C:\GitRoot\stockGrabber-ms-system-api\bin\MCD\Debug\netcoreapp2.0\stockGrabber-ms-system-api.dll
+C:\GitRoot\stockGrabber-ms-system-api\bin\MCD\Debug\netcoreapp2.0\stockGrabber-ms-system-api.pdb
+C:\GitRoot\stockGrabber-ms-system-api\obj\MCD\Debug\netcoreapp2.0\stockGrabber-ms-system-api.csproj.CoreCompileInputs.cache
+C:\GitRoot\stockGrabber-ms-system-api\obj\MCD\Debug\netcoreapp2.0\stockGrabber-ms-system-api.AssemblyInfoInputs.cache
+C:\GitRoot\stockGrabber-ms-system-api\obj\MCD\Debug\netcoreapp2.0\stockGrabber-ms-system-api.AssemblyInfo.cs
+C:\GitRoot\stockGrabber-ms-system-api\obj\MCD\Debug\netcoreapp2.0\stockGrabber-ms-system-api.dll
+C:\GitRoot\stockGrabber-ms-system-api\obj\MCD\Debug\netcoreapp2.0\stockGrabber-ms-system-api.pdb
+C:\GitRoot\stockGrabber-ms-system-api\bin\MCD\Debug\netcoreapp2.0\appsettings.json
+C:\GitRoot\stockGrabber-ms-system-api\bin\MCD\Debug\netcoreapp2.0\appsettings.Development.json

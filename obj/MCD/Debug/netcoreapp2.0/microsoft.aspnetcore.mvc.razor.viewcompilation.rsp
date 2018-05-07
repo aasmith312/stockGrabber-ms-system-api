@@ -1,0 +1,5 @@
+C:\GitRoot\stockGrabber-ms-system-api
+--output-path=obj\MCD\Debug\netcoreapp2.0\
+--application-name=stockGrabber-ms-system-api
+--content-root=C:\GitRoot\stockGrabber-ms-system-api
+--file=
