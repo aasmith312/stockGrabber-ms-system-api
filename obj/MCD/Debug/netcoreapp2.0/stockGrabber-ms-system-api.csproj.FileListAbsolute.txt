@@ -10,3 +10,4 @@ C:\GitRoot\stockGrabber-ms-system-api\obj\MCD\Debug\netcoreapp2.0\stockGrabber-m
 C:\GitRoot\stockGrabber-ms-system-api\obj\MCD\Debug\netcoreapp2.0\stockGrabber-ms-system-api.pdb
 C:\GitRoot\stockGrabber-ms-system-api\bin\MCD\Debug\netcoreapp2.0\appsettings.json
 C:\GitRoot\stockGrabber-ms-system-api\bin\MCD\Debug\netcoreapp2.0\appsettings.Development.json
+C:\GitRoot\stockGrabber-ms-system-api\obj\MCD\Debug\netcoreapp2.0\stockGrabber-ms-system-api.csprojResolveAssemblyReference.cache

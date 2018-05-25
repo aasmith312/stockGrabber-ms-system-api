@@ -47,7 +47,7 @@ namespace stockGrabber_ms_system_api.Controllers
         }
 
         // GET api/values/5
-        [HttpGet("{ticker}")]
+        [HttpGet("{ticker}"), FormatFilter]
         public IIntervalDateQuote Get(string ticker)
         {
             var retObj = repo.GetQuotes(ticker, 0); 

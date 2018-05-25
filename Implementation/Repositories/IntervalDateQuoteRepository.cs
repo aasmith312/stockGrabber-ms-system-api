@@ -24,7 +24,7 @@ namespace stockGrabber_ms_system_api.Implementation.Interfaces
             var connection = AvapiConnection.Instance;
             Console.WriteLine($"suboption1 = {_configuration["Data:ApiProviderKey"]}");
 
-            connection.Connect("");
+            connection.Connect("I7EOK16FWL1N1LKM");
 
             // Get the TIME_SERIES_DAILY query object
             var time_series_daily =
@@ -37,6 +37,9 @@ namespace stockGrabber_ms_system_api.Implementation.Interfaces
                  Const_TIME_SERIES_DAILY.TIME_SERIES_DAILY_outputsize.compact);
 
             var data = time_series_dailyResponse.Data;
+
+            if(data.Error)
+                throw new ApplicationException(data.ErrorMessage);
 
             return new IntervalDateQuote(time_series_dailyResponse.Data);
         }
