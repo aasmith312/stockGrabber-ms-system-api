@@ -1,4 +1,5 @@
 using stockGrabber_ms_system_api.Contracts.Interfaces;
+using stockGrabber_ms_system_api.Implementation.Entites.Base;
 
 namespace stockGrabber_ms_system_api.Contracts.Interfaces
 {
@@ -9,6 +10,6 @@ namespace stockGrabber_ms_system_api.Contracts.Interfaces
         decimal Low { get; set; }
         decimal Close { get; set; }
         decimal Volume { get; set; }
-        IMetaData MetaData {get;set;}
+        MetaData MetaData {get;set;}
     }
 }

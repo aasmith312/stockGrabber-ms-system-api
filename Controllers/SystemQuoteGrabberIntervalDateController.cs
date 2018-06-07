@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Formatters;
 using stockGrabber_ms_system_api.Contracts.Interfaces;
 using stockGrabber_ms_system_api.Implementation.Entites;
 using stockGrabber_ms_system_api.Implementation.Entites.Base;
@@ -20,45 +21,55 @@ namespace stockGrabber_ms_system_api.Controllers
         }
 
         // GET api/values
-        [HttpGet]
-        public IntervalDateQuote Get()
+        [HttpGet("{.format?}"), FormatFilter]
+        public IActionResult Get()
         {
             var retObj = new IntervalDateQuote();
-            retObj.Add(new DateQuote(){
-                        Open = 1.0M,
-                        High = 1.0M,
-                        Low = 1.0M,
-                        Close = 1.0M,
-                        Volume = 1.0M,
-                        MetaData = new MetaData(){
-                            TimeZone = "US/Eastern",
-                            LastRefresh = DateTime.UtcNow.AddHours(5),
-                            Symbol = "IBM"
-                        }
+            retObj.Add(new DateQuote()
+            {
+                Open = 1.0M,
+                High = 1.0M,
+                Low = 1.0M,
+                Close = 1.0M,
+                Volume = 1.0M,
+                MetaData = new MetaData()
+                {
+                    TimeZone = "US/Eastern",
+                    LastRefresh = DateTime.UtcNow.AddHours(5),
+                    Symbol = "IBM"
+                }
             });
 
-            return retObj;
+            return new ObjectResult(retObj);
         }
 
-        [HttpGet("{ticker}/{interval}")]
+        [HttpGet("{ticker}/{interval}.{format?}"), FormatFilter]
         public IEnumerable<IDateQuote> Get(string ticker, int interval)
         {
             return repo.GetQuotes(ticker, interval);
         }
 
         // GET api/values/5
-        [HttpGet("{ticker}"), FormatFilter]
-        public IIntervalDateQuote Get(string ticker)
+        [HttpGet("{ticker}.{format?}"), FormatFilter]
+        public IActionResult Get(string ticker, [FromQuery] string format) 
         {
-            var retObj = repo.GetQuotes(ticker, 0); 
-            return retObj;
+            if (!String.IsNullOrEmpty(ticker))
+            {
+                if (!ticker.Equals(".xml"))
+                {
+                    var retObj = repo.GetQuotes(ticker, 0);
+                    return new ObjectResult(retObj);
+                }
+                return new SystemQuoteGrabberIntervalDateController(this.repo).Get();
+            }
+            return null;
         }
 
         // POST api/values
         [HttpPost]
         public void Post([FromBody]string value)
         {
-            
+
 
 
         }

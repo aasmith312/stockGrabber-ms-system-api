@@ -4,6 +4,7 @@ using stockGrabber_ms_system_api.Implementation.Entites.Base;
 
 namespace stockGrabber_ms_system_api.Implementation.Entites
 {
+    [Serializable]
     public class DateQuote : Quote, IDateQuote
     {
         public DateTime DateStamp {get; set;}
@@ -20,7 +21,7 @@ namespace stockGrabber_ms_system_api.Implementation.Entites
         }
 
 
-        public DateQuote(Avapi.AvapiTIME_SERIES_DAILY.TimeSeries_Type_TIME_SERIES_DAILY item, IMetaData metaData) 
+        public DateQuote(Avapi.AvapiTIME_SERIES_DAILY.TimeSeries_Type_TIME_SERIES_DAILY item, MetaData metaData) 
         : this(item)
         {
             this.MetaData = metaData;

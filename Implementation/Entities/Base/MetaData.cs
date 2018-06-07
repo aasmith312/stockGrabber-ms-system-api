@@ -3,6 +3,7 @@ using stockGrabber_ms_system_api.Contracts.Interfaces;
 
 namespace stockGrabber_ms_system_api.Implementation.Entites.Base
 {
+    [Serializable]
     public class MetaData : IMetaData
     {
         public string Info { get; set; }

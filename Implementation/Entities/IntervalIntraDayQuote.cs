@@ -6,7 +6,8 @@ using stockGrabber_ms_system_api.Implementation.Entites.Base;
 
 namespace stockGrabber_ms_system_api.Implementation.Entites
 {
-    public class IntervalDateQuote : List<IDateQuote>, IIntervalDateQuote
+    [Serializable]
+    public class IntervalDateQuote : List<DateQuote>, IIntervalDateQuote
     {
         public IntervalDateQuote(){}
         public IntervalDateQuote(Avapi.AvapiTIME_SERIES_DAILY.IAvapiResponse_TIME_SERIES_DAILY_Content data)
@@ -19,6 +20,6 @@ namespace stockGrabber_ms_system_api.Implementation.Entites
                 }
         }
 
-        public IMetaData MetaData {get;set;}
+        public MetaData MetaData {get;set;}
     }
 }
