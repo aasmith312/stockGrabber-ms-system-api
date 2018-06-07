@@ -26,7 +26,6 @@ namespace stockGrabber_ms_system_api.Controllers
         {
             var retObj = this.repo.GetSectorPerformance();
 
-
             return new ObjectResult(retObj);
         }
     }
