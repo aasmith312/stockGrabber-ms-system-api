@@ -22,11 +22,14 @@ namespace stockGrabber_ms_system_api.Controllers
 
         // GET api/values
         [HttpGet("{.format?}"), FormatFilter]
-        public IActionResult Get()
+        public IActionResult Get([FromQuery] string format)
         {
             var retObj = this.repo.GetSectorPerformance();
 
             return new ObjectResult(retObj);
         }
+
+
+        
     }
 }
